@@ -17,7 +17,7 @@ namespace FidoHistory
     public static class FidoHistoryFunction
     {
         [FunctionName("HistoryPublisher")]
-        public static void Run([ServiceBusTrigger("testtopic", "mysubscription", AccessRights.Manage, Connection = "conn")]string msg, TraceWriter log)
+        public static void Run([ServiceBusTrigger("fidoscattersearch", "mysubscription", AccessRights.Manage, Connection = "conn")]string msg, TraceWriter log)
         {
             log.Info($"C# ServiceBus topic trigger function processed message: {msg}");
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
