@@ -53,7 +53,7 @@ public class RequestEntity : TableEntity
     private string sid;
     private string payload;
 
-    public string correlationid
+    public string correlationId
     {
         get { return cid; }
         set {
@@ -61,7 +61,7 @@ public class RequestEntity : TableEntity
             this.RowKey = value;
         }
     }
-    public string storeid
+    public string storeId
     { 
         get { return sid; }
         set {
